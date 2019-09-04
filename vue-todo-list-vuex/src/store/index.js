@@ -66,18 +66,6 @@ export default {
 
         createTodos(context, inputtingItem) {
             const url = "http://5b4dcb2aec112500143a2311.mockapi.io/api/todos";
-            //put
-            axios
-                .put(url+"/"+159, {
-                    content: inputtingItem,
-                    status: "active"
-                })
-                .then(function (response) {
-                    context.dispath("fetchTodos");
-                })
-                .catch(function (error) {
-                    console.log(error.response);
-                });
             //post
             axios
                 .post(url, {
