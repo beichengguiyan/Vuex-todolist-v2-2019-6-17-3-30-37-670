@@ -45,14 +45,12 @@ export default {
     },
 
     actions: {
-
-
         updateTodos(context, obj) {
             const url = "http://5b4dcb2aec112500143a2311.mockapi.io/api/todos";
             //put
-            console.log(53,obj)
+            console.log(53, obj)
             axios
-                .put(url+"/"+obj.id, {
+                .put(url + "/" + obj.id, {
                     content: obj.inputtingItem,
                     status: "active"
                 })
